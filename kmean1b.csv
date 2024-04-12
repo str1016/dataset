@@ -7,7 +7,6 @@ X_train,X_test , Y_train , Y_test  = train_test_split(X,Y,test_size=0.3)
 
 Kmeans=  KMeans(n_clusters=3,random_state=42)
 Kmeans.fit(X)
-
 cluster_label = Kmeans.labels_
 
 plt.scatter(X[:,0],X[:,1],c=cluster_label,cmap='viridis')
