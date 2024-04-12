@@ -1,4 +1,4 @@
-"import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 Iris = load_iris()
@@ -11,7 +11,4 @@ Kmeans.fit(X)
 cluster_label = Kmeans.labels_
 
 plt.scatter(X[:,0],X[:,1],c=cluster_label,cmap='viridis')
-plt.xlabel("Sepal Length")
-plt.ylabel("Sepal widht")
-plt.show()
-"
+plt.xlabel(Sepal Length")
