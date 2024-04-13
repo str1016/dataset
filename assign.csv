@@ -1,5 +1,5 @@
 "
-#2x2
+#assign1
  import numpy as np 
  import pandas as pd 
  from sklearn.metrics import confusion_matrix 
@@ -14,7 +14,7 @@
  plt.xlabel('Actual') 
  plt.show()"
 "
-#3x3
+#assign2
  import numpy as np 
  import pandas as pd 
  from sklearn.metrics import confusion_matrix 
@@ -29,7 +29,7 @@
  plt.show()
  "
 "
-
+#assign3
  import pandas as pd 
  import numpy as np 
  from sklearn.model_selection 
@@ -57,6 +57,7 @@ classification_report:',cr)
  print('
 Mean:',np.mean(cvs)) "
 "
+#assign4
 from sklearn.model_selection import train_test_split 
 from sklearn.feature_extraction.text import TfidfVectorizer 
 from sklearn.multioutput import MultiOutputClassifier 
@@ -82,6 +83,7 @@ print(""accuracy_score: "",accuracy)
 print(""
 classification_report: "",cr)"
 "
+#assign5
 import pandas as pd 
 import numpy as np 
 from scipy import stats 
