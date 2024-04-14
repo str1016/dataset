@@ -1,17 +1,20 @@
-"import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import SVC
-df = pd.read_csv('https://raw.githubusercontent.com/str1016/dataset/main/iris.csv')
-df
-x=df['text']
-y=df['sentiment']
-v = TfidfVectorizer()
-xtf = v.fit_transform(x)
-classfier = SVC()
-model= classfier.fit(xtf,y)
-def Sentiment(sentence):
-    tf_sent =  v.transform([sentence])
-    pred =  model.predict(tf_sent)[0]
-    return pred
-input_sentence = ""This movie is great!""
-print(Sentiment(input_sentence))"
+"from Crypto.PublicKey import RSA
+from Crypto import Random
+from Crypto.Cipher import PKCS1_v1_5
+import binascii
+random=Random.new().read
+key=RSA.generate(4096,random)
+print("Encypt STR")
+message=b'STR'
+cipher=PKCS1_v1_5.new(key)
+text=cipher.encrypt(message)
+print("Encruped message is:" , binascii.hexlify(text))
+
+import rsa
+(pubkey,prikey)=rsa.newkeys(4096)
+print("Encypt STR")
+message=b'STR'
+encrypted_message = rsa.encrypt(message, pubkey) # Encryption
+print("Emcrypted message is: ",encrypted_message)
+decrypted_message = rsa.decrypt(encrypted_message, prikey)
+print("\nDecrypted message is :", decrypted_message)"
