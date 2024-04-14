@@ -4,17 +4,20 @@ from Crypto.Cipher import PKCS1_v1_5
 import binascii
 random=Random.new().read
 key=RSA.generate(4096,random)
-print("Encypt STR")
+print(""Encypt STR"")
 message=b'STR'
 cipher=PKCS1_v1_5.new(key)
 text=cipher.encrypt(message)
-print("Encruped message is:" , binascii.hexlify(text))
+print(""Encruped message is:"" , binascii.hexlify(text))
+
+
+
 
 import rsa
 (pubkey,prikey)=rsa.newkeys(4096)
-print("Encypt STR")
+print(""Encypt STR"")
 message=b'STR'
 encrypted_message = rsa.encrypt(message, pubkey) # Encryption
-print("Emcrypted message is: ",encrypted_message)
+print(""Emcrypted message is: "",encrypted_message)
 decrypted_message = rsa.decrypt(encrypted_message, prikey)
-print("\nDecrypted message is :", decrypted_message)"
+print(""\nDecrypted message is :"", decrypted_message)"
